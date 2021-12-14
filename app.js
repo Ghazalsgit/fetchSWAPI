@@ -38,6 +38,7 @@ const getCharacters = async (index) => {
     .map((person) => `<p>${person.name}</p>`)
     .sort()
     .join("");
+   
 };
 /* mapping out every single movie fron the movies array and giving each movie a eventlister
 that will run the funcion cardsEventlistner when clicked. It will also show the movie title
@@ -64,6 +65,7 @@ const cardsEventlistner = (index) => {
 // closing the modal when clicked on the button 
 const closeCardModal = () => {
   modal.style.display = "none";
+  modal.innerHTML = ""
 };
 //calling the function to fetch the movies
-getFilms();
+window.addEventListener("load", getFilms)
